@@ -6,7 +6,7 @@ import UserHero from "@/components/users/UserHero";
 import UserBio from "@/components/users/UserBio";
 import PostFeed from "@/components/posts/PostFeed";
 
-const userId = () => {
+const userView = () => {
   const router = useRouter();
   const { userId } = router.query;
   const { data: fetchedUser, isLoading } = useUser(userId as string);
@@ -29,4 +29,4 @@ const userId = () => {
   );
 };
 
-export default userId;
+export default userView;
