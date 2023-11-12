@@ -13,7 +13,7 @@ export default async function handler(
   try {
     const { body } = req.body;
     const { postId } = req.query;
-    const { currentUser } = await serverAuth(req, res);
+    const { currentUser } = await serverAuth(req);
 
     if (!postId || typeof postId !== "string") {
       throw new Error("Invalid ID");
